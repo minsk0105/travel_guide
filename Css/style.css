@@ -2,27 +2,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #222222;
-    font-family: 'Freesentation-9Black';
+    color: #222;
+    font-family: 'Pretendard-Regular', sans-serif;
 }
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
 li {
     list-style: none;
     padding-left: 0;
 }
+li::marker {content: "";}
+
 a {
     text-decoration: none;
     color: inherit;
-}
-
-@font-face {
-    font-family: 'Freesentation-9Black';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-:root {
-    --white-font: #eee;
 }
 
 /* header */
@@ -32,93 +31,154 @@ header {
     left: 0;
     width: 100%;
     height: 95px;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 60px;
-    z-index: 2;
-    transition: 0.3s ease-out;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    transition: 0.3s ease-out;
+    transition: .5s ease-out;
 }
-header:hover {background-color: white;}
-header:hover a {
-    color: #222222;
+header a {
+    color: #eee;
+    font-weight: bold;
 }
 
-.logo {font-size: 25px; color: var(--white-font);}
+.logo {font-size: 30px;}
 
 nav {display: flex;}
 nav > li {padding: 0 60px;}
-nav > li a {
-    font-size: 16px;
-    color: var(--white-font);
+nav > li > a {
     text-transform: uppercase;
-    transition: 0.3s ease-out;
+    font-size: 16px;
 }
-nav > li > a:hover {color: #0A31A8;}
 
-.util {display: flex;}
-.util a {
+.lang {
+    display: flex;
+}
+.lang a {
     position: relative;
     margin-left: 30px;
-    font-size: 12px;
-    color: var(--white-font);
-    transition: 0.3s ease-out;
+    font-size: 14px;
+    height: 16px;
 }
-.util > a:hover {color: #0A31A8;}
-.util a:nth-of-type(1):before {
+.lang a:nth-of-type(1)::before {
     position: absolute;
     content: "";
-    top: 2px;
+    top: 3px;
     right: -15px;
     width: 1px;
-    height: 9.6px;
-    background-color: var(--white-font);
+    height: 10px;
+    background-color: #eee;
 }
-header:hover .util a:nth-of-type(1):before {background-color: #222222;}
-.scrolling .util a:nth-of-type(1)::before {background-color: #222222;}
-.scrolling {background-color: white;}
-.scrolling a {
-    color: #222222;
+.lang a:nth-of-type(2) {
+    color: rgba(255, 255, 255, 0.5);
 }
 
+.scrolled {background-color: white;}
+.scrolled, header:hover {background-color: white;}
+.scrolled a, header:hover a {color: #222;}
+.scrolled .lang a::before, header:hover .lang a::before {background-color: #222;}
+.scrolled .lang a:nth-of-type(2), header:hover .lang a:nth-of-type(2) {color: #888;}
+header a:hover {color: #0A31A8;}
+
+
+
+
+
 /* visual */
-.visual {
+#visual {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 200vh;
     overflow: hidden;
+    transition: .5s ease-out;
 }
-.visual::before {
+#visual::after {
     position: absolute;
     content: "";
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
 }
-.visual img {
+#visual > img {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
 
-.slide_txt {
+#visual > div {
     position: absolute;
-    top: 50%;
-    left: 60px;
-    transform: translateY(-50%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    transition: .5s ease-out;
 }
-.slide_txt p {
-    color: var(--white-font);
-    font-size: 70px;
+#visual > div img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.sld_txt {
+    position: absolute;
+    top: 0;
+    left: 60px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 50px;
+    color: #eee;
+    z-index: 1;
+}
+
+.cate_box {
+    margin-top: 100vh;
+    width: 100%;
+    height: 100vh;
+    padding: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+.cate_box > h1 {
+    color: white;
+    font-size: 50px;
+    height: 100%;
+}
+
+.cate_list {
+    width: calc(32vw + 40px);
+    height: calc(36vw + 40px);
+    display: flex;
+    flex-wrap: wrap;
+}
+.box {
+    width: 16vw;
+    height: 18vw;
+    background-color: #0B235B;
+    background-color: rgba(11, 35, 91, 0.8);
+    backdrop-filter: blur(20px);
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 2.5vw;
+    padding: 2vw;
+}
+.box > p {
+    color: white;
+    font-weight: bold;
+    font-size: 1.8vw;
 }
 
 /* list */
 #list {
+    position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
