@@ -30,7 +30,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 95px;
+    height: 90px;
     z-index: 2;
     display: flex;
     justify-content: space-between;
@@ -126,31 +126,37 @@ header a:hover {color: #0A31A8;}
 .sld_txt {
     position: absolute;
     top: 0;
-    left: 60px;
+    left: 0;
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
-    font-size: 50px;
+    text-align: center;
+    font-size: 60px;
     color: #eee;
     z-index: 1;
 }
 
-.cate_box {
+/* category */
+.category {
+    position: absolute;
+    top: 0;
+    left: 0;
     margin-top: 100vh;
     width: 100%;
-    height: 100vh;
-    padding: 60px;
+    height: 100%;
+    padding: 0 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1;
 }
-.cate_box > h1 {
-    color: white;
-    font-size: 50px;
-    height: 100%;
+
+.category > h1 {
+    font-size: 60px;
+    height: calc(36vw + 40px);
+    color: #eee;
+    z-index: 1;
 }
 
 .cate_list {
@@ -158,7 +164,9 @@ header a:hover {color: #0A31A8;}
     height: calc(36vw + 40px);
     display: flex;
     flex-wrap: wrap;
+    z-index: 1;
 }
+
 .box {
     width: 16vw;
     height: 18vw;
@@ -166,20 +174,43 @@ header a:hover {color: #0A31A8;}
     background-color: rgba(11, 35, 91, 0.8);
     backdrop-filter: blur(20px);
     margin: 10px;
-    overflow: hidden;
     border-radius: 2.5vw;
     padding: 2vw;
 }
+
 .box > p {
-    color: white;
+    color: #eee;
+    font-size: 1.6vw;
     font-weight: bold;
-    font-size: 1.8vw;
+}
+
+.box span {
+    display: block;
+    margin-top: 10px;
+    color: #eeeeeec0;
+}
+
+.box > a {
+    position: absolute;
+    bottom: 2vw;
+    width: 2.5vw;
+    height: 2.5vw;
+    background-color: rgba(255, 255, 255, 0.15);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.3s ease-out;
+}
+.box a:hover {background-color: white;}
+.box a:hover path {color: #222;}
+.box path {
+    color: #eee;
 }
 
 /* list */
 #list {
-    position: relative;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
 }
