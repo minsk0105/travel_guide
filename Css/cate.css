@@ -1,0 +1,129 @@
+/* category */
+#category {
+    padding: 100px 0;
+    width: 100%;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.cate_con {
+    margin-top: 4rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cate_box {
+    position: relative;
+    width: 58.5rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cate_con > div > div:nth-of-type(2) {
+    margin-top: 3rem;
+}
+
+.cate_box::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: var(--hover);
+}
+
+.one {height: 29rem;}
+.two {height: 33rem;}
+
+.cate_box img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: var(--hover);
+}
+
+.sec_name {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    transition: var(--hover);
+    opacity: 0;
+}
+
+.sec_name h1 {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.sec_name p {
+    margin-top: .5rem;
+    font-size: 1.6rem;
+    color: #EEEEEEB3;
+}
+
+.now_go {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--hover);
+}
+
+.now_go svg {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.now_go path {color: white;}
+
+.cate_box:hover::before {background-color: rgba(0, 0, 0, 0.4);}
+.cate_box:hover .sec_name {opacity: 1;}
+.cate_box:hover a {background-color: white;}
+.cate_box:hover path {color: black;}
+.cate_box a:hover path {color: var(--blue);}
+
+.tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    transition: var(--hover);
+}
+
+#attr {
+    font-size: 41rem;
+    line-height: 290px;
+}
+#acti, #food {
+    font-size: 47rem;
+    line-height: 330px;
+}
+#sugg {
+    font-size: 40rem;
+    line-height: 290px;
+}
+
+.cate_box:hover .tag {transform: scale(2.1);}
+.cate_box:hover img {transform: scale(1.1);}

@@ -1,39 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToJeju</title>
-    <link rel="stylesheet" href="Css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Css/style.css">
 </head>
 <body>
-    
     <!-- header -->
     <header>
         <div class="header">
             <!-- logo -->
             <div class="header_logo">
-                <a href="#" class="logo"><img src="Image/tojeju_logo.png" alt=""></a>
+                <a href="index.html" class="logo"><img src="Image/tojeju_logo.png" alt=""></a>
             </div>
 
             <!-- navigation -->
             <nav>
                 <div class="themes">
-                    <button type="button" class="light">light</button>
-                    <button type="button" class="dark">dark</button>
+                    <button type="button" class="light stroke">light</button>
+                    <button type="button" class="dark not">dark</button>
                 </div>
 
                 <ul>
-                    <li><a href="#">attractions</a></li>
-                    <li><a href="#">food</a></li>
-                    <li><a href="#">activities</a></li>
-                    <li><a href="#">suggestion</a></li>
+                    <li><a href="#attractions">attractions</a></li>
+                    <li><a href="#food">food</a></li>
+                    <li><a href="#activities">activities</a></li>
+                    <li><a href="#suggestion">suggestion</a></li>
                 </ul>
 
-                <div class="lang">
-                    <a href="#" class="kor">kor</a>
+                <div class="language">
+                    <a href="#" class="kor stroke not">kor</a>
                     <a href="#" class="eng">eng</a>
                 </div>
             </nav>
@@ -46,64 +45,55 @@
 
         <div class="visual_txt">
             <h1>welcome <span>to jeju</span></h1>
-            <p>a place that offers various pleasures and memories</p>
+            <p>A place that offers various pleasures and memories</p>
         </div>
     </section>
 
     <main>
         <div class="main">
-
-            <!-- page index -->
-            <section id="index">
+            <!-- category -->
+            <section id="category">
                 <h1 class="title">category</h1>
 
-                <div class="category">
+                <div class="cate_con">
                     <div>
                         <div class="cate_box one">
                             <img src="https://www.c3ka.com/wp-content/uploads/2023/06/01-withjis-jinjungsung.jpg" alt="">
-                            <p id="attr">a</p>
-                            <div class="tag">
+                            <div class="sec_name">
                                 <h1>attractions</h1>
                                 <p>Enjoy Jeju's representative attractions</p>
                             </div>
-                            <a href="#">
-                                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.4 10.95L13.4 12.95H21.58L10.95 23.58L12.36 25L23 14.37V22.55L25 20.55V10.95H15.4Z" fill="currentColor"></path></svg>
-                            </a>
+                            <a href="#attractions" class="now_go"><svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.4 10.95L13.4 12.95H21.58L10.95 23.58L12.36 25L23 14.37V22.55L25 20.55V10.95H15.4Z" fill="currentColor"></path></svg></a>
+                            <p class="tag" id="attr">a</p>
                         </div>
                         <div class="cate_box two">
                             <img src="https://asset.981park.com/www/common/mweb/img/sub/play/img-galexy-arena1.png" alt="">
-                            <p id="acti">a</p>
-                            <div class="tag">
+                            <div class="sec_name">
                                 <h1>activities</h1>
                                 <p>Make various memories in Jeju</p>
                             </div>
-                            <a href="#">
-                                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.4 10.95L13.4 12.95H21.58L10.95 23.58L12.36 25L23 14.37V22.55L25 20.55V10.95H15.4Z" fill="currentColor"></path></svg>
-                            </a>
+                            <a href="#activities" class="now_go"><svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.4 10.95L13.4 12.95H21.58L10.95 23.58L12.36 25L23 14.37V22.55L25 20.55V10.95H15.4Z" fill="currentColor"></path></svg></a>
+                            <p class="tag" id="acti">a</p>
                         </div>
                     </div>
                     <div>
                         <div class="cate_box two">
                             <img src="https://cdn.eyesmag.com/content/uploads/sliderImages/2024/01/30/05-23f8c3c3-cf0e-4754-a75d-b77ab4868391.jpg" alt="">
-                            <p id="food">f</p>
-                            <div class="tag">
+                            <div class="sec_name">
                                 <h1>food</h1>
                                 <p>Food you can only taste in Jeju</p>
                             </div>
-                            <a href="#">
-                                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.4 10.95L13.4 12.95H21.58L10.95 23.58L12.36 25L23 14.37V22.55L25 20.55V10.95H15.4Z" fill="currentColor"></path></svg>
-                            </a>
+                            <a href="#food" class="now_go"><svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.4 10.95L13.4 12.95H21.58L10.95 23.58L12.36 25L23 14.37V22.55L25 20.55V10.95H15.4Z" fill="currentColor"></path></svg></a>
+                            <p class="tag" id="food">f</p>
                         </div>
                         <div class="cate_box one">
                             <img src="https://api.cdn.visitjeju.net/photomng/imgpath/201804/30/ca9b0972-d6ef-4fba-9b08-89a867a0f19d.jpg" alt="">
-                            <p id="sugg">s</p>
-                            <div class="tag">
+                            <div class="sec_name">
                                 <h1>suggestion</h1>
                                 <p>We recommend you some special and unique tourist attractions</p>
                             </div>
-                            <a href="#">
-                                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.4 10.95L13.4 12.95H21.58L10.95 23.58L12.36 25L23 14.37V22.55L25 20.55V10.95H15.4Z" fill="currentColor"></path></svg>
-                            </a>
+                            <a href="#suggestion" class="now_go"><svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.4 10.95L13.4 12.95H21.58L10.95 23.58L12.36 25L23 14.37V22.55L25 20.55V10.95H15.4Z" fill="currentColor"></path></svg></a>
+                            <p class="tag" id="sugg">s</p>
                         </div>
                     </div>
                 </div>
@@ -113,11 +103,15 @@
             <section id="attractions">
                 <h1 class="title">attractions</h1>
 
-                <div class="attr_label">
+                <div class="attr_slider">
                     <div class="location_info">
-                        <div>
+                        <div class="place">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" aria-hidden="true"><path d="M9,1C5.4,1,2.5,3.7,2.5,7.1c0,1.2,0.4,2.3,1,3.3l5.1,6.1c0.2,0.2,0.6,0.2,0.8,0l5.1-6.1c0.7-1,1-2.1,1-3.3C15.5,3.7,12.6,1,9,1z M9,9C8.2,9,7.5,8.3,7.5,7.5C7.5,6.7,8.2,6,9,6s1.5,0.7,1.5,1.5C10.5,8.3,9.8,9,9,9z"></path></svg>
                             <p>11 Aewol-ro, Aewol-eup, Jeju-si, Jeju Special Self-Governing Province</p>
+                        </div>
+                        <div class="fee">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" class="DNzQ2" aria-hidden="true"><path d="M9,16.5c4.1,0,7.5-3.4,7.5-7.5c0-4.1-3.4-7.5-7.5-7.5C4.9,1.5,1.5,4.9,1.5,9C1.5,13.1,4.9,16.5,9,16.5zM13.5,6.1l-0.7,2.4h0.7C13.8,8.5,14,8.7,14,9s-0.2,0.5-0.5,0.5h-1.2l-0.8,3h-1.3l-0.8-3h-1l-0.8,3H6.3l-0.8-3h-1C4.2,9.5,4,9.3,4,9s0.2-0.5,0.5-0.5h0.8L4.6,6.1h1.2l0.6,2.4h1.4l0.6-2.4h1.2l0.6,2.4h1.4l0.6-2.4H13.5z M6.6,9.5L7,11.2l0.5-1.7H6.6z M9,7.7L8.8,8.5h0.4L9,7.7z M10.5,9.5l0.5,1.7l0.4-1.7H10.5z"></path></svg>
+                            <p>Admission Fee : Free</p>
                         </div>
                         <div class="place_tag">
                             <span>#gallery</span>
@@ -125,15 +119,11 @@
                         </div>
                     </div>
                     <div class="swip_btn">
-                        <button type="button" class="prev">
-                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAADGSURBVGhD7dbBDcIwDIXhAAswEqMwAhsAm8EEsFHxo4lU9cCBxM9y9T7JSrn5r4jUIiIiEuBqc5sf88HyU53uiH09WTbz5oe8fSYtH0XLR9HyUbR8FC0fRcv3GvU1ercJCTjU8x/PxZnqr/PL0eYyP+aD5V826S5zc7ahX+qeO7D2rudpce5sHt9fTkYGQLvYtIjRAUCN8AgAWoRXAFAiPAPAPcI7AFwjGAHgFsEKAJcIZgCsI/A7VQC0CJyb+YoVEZEIpXwArLlZU7zxFkcAAAAASUVORK5CYII=" alt="">
-                        </button>
-                        <button type="button" class="next">
-                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAADFSURBVGhD7djRDcIwDATQQBdgIxiFEboBsBlMwEjgK0HwwQeitk8u96RT2n75qlRENBER+WtDX+c6WraWy3RXDIa/9RzwINO6r15QJrWExxY6W1aW3XT3WlO2k9c3QCvhVQAoJTwLQHoJ7wKQWiKiAKSViCoAKSUiCwDlw47w/muN7C3lPEtcLRs8qGi0lB3+k/SzkyeXU6z3afRbi3nzs94+g4Zn0fAsGp5Fw7NoeBYN/6uI/0ZPj8taMHipbSMiIkvQ2h3EAVcw6R+shwAAAABJRU5ErkJggg==" alt="">
-                        </button>
+                        <button type="button" class="prev"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAADGSURBVGhD7dbBDcIwDIXhAAswEqMwAhsAm8EEsFHxo4lU9cCBxM9y9T7JSrn5r4jUIiIiEuBqc5sf88HyU53uiH09WTbz5oe8fSYtH0XLR9HyUbR8FC0fRcv3GvU1ercJCTjU8x/PxZnqr/PL0eYyP+aD5V826S5zc7ahX+qeO7D2rudpce5sHt9fTkYGQLvYtIjRAUCN8AgAWoRXAFAiPAPAPcI7AFwjGAHgFsEKAJcIZgCsI/A7VQC0CJyb+YoVEZEIpXwArLlZU7zxFkcAAAAASUVORK5CYII=" alt=""></button>
+                        <button type="button" class="next"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAADFSURBVGhD7djRDcIwDATQQBdgIxiFEboBsBlMwEjgK0HwwQeitk8u96RT2n75qlRENBER+WtDX+c6WraWy3RXDIa/9RzwINO6r15QJrWExxY6W1aW3XT3WlO2k9c3QCvhVQAoJTwLQHoJ7wKQWiKiAKSViCoAKSUiCwDlw47w/muN7C3lPEtcLRs8qGi0lB3+k/SzkyeXU6z3afRbi3nzs94+g4Zn0fAsGp5Fw7NoeBYN/6uI/0ZPj8taMHipbSMiIkvQ2h3EAVcw6R+shwAAAABJRU5ErkJggg==" alt=""></button>
                     </div>
                     <div class="swiper">
-                        <div class="attr_box">
+                        <div class="attr_box out_range">
                             <div class="attr_img">
                                 <img src="https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/WhJ/image/SIQRkrcgrkh6_nNZb1jOkkV7feU.jpg" alt="">
                                 <p>jeju provincial museum of art</p>
@@ -158,7 +148,7 @@
                             </div>
                         </div>
                         <div class="attr_box">
-                            <div class="attr_img curr_img">
+                            <div class="attr_img this_img">
                                 <img src="https://contents-cdn.viewus.co.kr/image/2024/04/CP-2023-0038/image-090a0a49-10de-4a55-a09b-6d6008ffa7cf.jpeg" alt="">
                                 <p>aewol handam park</p>
                             </div>
@@ -193,7 +183,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="attr_box">
+                        <div class="attr_box out_range">
                             <div class="attr_img">
                                 <img src="https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9mnY/image/trAiT1RdncW15Y7OKExeICY483w.JPG" alt="">
                                 <p>seongsan sunrise peak</p>
@@ -205,8 +195,8 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="attr_box">
-                            <div class="attr_img">
+                        <div class="attr_box out_range">
+                            <div class="attr_img this_img">
                                 <img src="https://contents-cdn.viewus.co.kr/image/2024/04/CP-2023-0038/image-090a0a49-10de-4a55-a09b-6d6008ffa7cf.jpeg" alt="">
                                 <p>aewol handam park</p>
                             </div>
@@ -217,7 +207,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="attr_box">
+                        <div class="attr_box out_range">
                             <div class="attr_img">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Korea-Jeju-Cheonjiyeon_Waterfall-01.jpg" alt="">
                                 <p>cheonjiyeon falls</p>
@@ -229,7 +219,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="attr_box">
+                        <div class="attr_box out_range">
                             <div class="attr_img">
                                 <img src="https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/WhJ/image/SIQRkrcgrkh6_nNZb1jOkkV7feU.jpg" alt="">
                                 <p>jeju provincial museum of art</p>
@@ -244,10 +234,9 @@
                     </div>
                 </div>
             </section>
-
         </div>
     </main>
-    <script src="Js/app.js"></script>
 
+    <script src="Js/script.js"></script>
 </body>
 </html>
