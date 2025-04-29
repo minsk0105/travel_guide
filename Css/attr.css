@@ -1,6 +1,5 @@
 #attractions {
-    margin-top: 2rem;
-    padding-bottom: 10rem;
+    padding-top: 12rem;
     width: 100%;
 }
 
@@ -88,7 +87,7 @@
 
 /* swiper */
 .swiper {
-    width: calc(70rem * 9);
+    width: calc(70rem * 12);
     height: 100%;
     overflow: hidden;
     display: flex;

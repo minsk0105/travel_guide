@@ -1,3 +1,13 @@
+let getJson;
+fetch("Js/place.json")
+.then((res) => {
+    return res.json();
+})
+.then(data => {
+    getJson = data;
+    expInfo();
+});
+
 window.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', () => {
@@ -28,13 +38,18 @@ btns.forEach((btn) => {
             index -= 1;
         }
 
-        if (page === -700 || page === -4200) {
+        expInfo();
+
+        const places = -700 * (getJson.length + 1);
+        const totalIndex = getJson.length + 1;
+
+        if (page === -700 || page === (places + -700)) {
             setTimeout(() => {
                 swiper.style.transition = '0s';
                 if (page === -700) {
-                    index = 5;
-                    page = -3500;
-                    swiper.style.transform = 'translateX(-3500px)';
+                    index = totalIndex;
+                    page = places;
+                    swiper.style.transform = `translateX(${places}px)`;
                 } else {
                     index = 2;
                     page = -1400;
@@ -59,12 +74,32 @@ btns.forEach((btn) => {
     });
 });
 
+function expInfo() {
+    $('.place_tag').empty();
+    for (let i = 0; i < getJson.length; i++) {
+        let boxNum = index - 1;
+        if (boxNum > getJson.length) boxNum = boxNum - getJson.length;
+        else if (boxNum < 1) boxNum = boxNum + getJson.length;
+        if (boxNum === getJson[i].id) {
+            $('.place > p').text(`${getJson[i].address}`);
+            $('.fee > p').text(`Admission Fee : ${getJson[i].fee}`);
+            
+            for (let j = 0; j < getJson[i].tag.length; j++) {
+                const newTag = document.createElement('span');
+                newTag.textContent = '#' + getJson[i].tag[j];
+                $('.place_tag').append(newTag);
+            }
+        }
+    }
+};
+
 function swiping(index) {
     const prevRange = index - 1;
     const nextRange = index + 2;
+    const totalIndex = getJson.length + 1;
 
     boxes.forEach((box, num) => {
-        if (index === 2 || index === 5) box.style.transition = '0s';
+        if (index === 2 || index === totalIndex) box.style.transition = '0s';
         const isRange = (num < prevRange || num > nextRange)
             ? box.classList.add('out_range')
             : box.classList.remove('out_range');

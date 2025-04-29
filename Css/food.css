@@ -1,0 +1,18 @@
+#local {
+    padding-top: 12rem;
+}
+
+.local_con {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.local_con > div {
+    width: 50%;
+}
+
+.local_con h1 {
+    font-size: 5rem;
+    font-weight: bold;
+}
