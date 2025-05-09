@@ -1,5 +1,5 @@
 #local {
-    padding-top: 12rem;
+    padding-top: 10rem;
 }
 
 .local_con {
@@ -15,4 +15,23 @@
 .local_con h1 {
     font-size: 5rem;
     font-weight: bold;
+}
+
+/* food category */
+.local_con > div:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+}
+
+.local_items {
+    width: 50rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.food_box {
+    width: 23rem;
+    height: 23rem;
+    margin: 1rem;
+    background-color: lightblue;
 }
