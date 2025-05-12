@@ -1,6 +1,8 @@
 @charset "UTF-8";
 @import url('cate.css');
 @import url('attr.css');
+@import url('food.css');
+@import url('acti.css');
 
 *,
 *::before,
@@ -44,73 +46,23 @@ button {
     outline: inherit;
 }
 
+/* px 대신 rem 단위 사용 */
 html {
     font-size: 62.5%;
+    /* 1rem을 10px로 변환 (원래는 16px) */
     scroll-behavior: smooth;
-}
-
-:root {
-    --width: 120rem;
-    --orange: #F7941D;
-    --transition: 0.5s ease-in-out;
-    --hover: 0.3s ease-out;
-    --light: #FFFFFF;
-    --dark: #000000;
 }
 
 body {
     min-width: 320px;
-    background-color: var(--light);
 }
 
-/* intro animation */
-.int_ani {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    z-index: -1;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    animation: show_wrap 6s ease-in-out;
-}
-
-.int_ani > div {
-    height: calc(7.1rem + 2.6rem);
-}
-
-.int_ani > div > div {
-    overflow: hidden;
-    height: 0;
-    animation: show_txt 6s ease-in-out;
-}
-
-.int_ani h1 {
-    width: 45.5rem;
-    text-align: right;
-    font-size: 6rem;
-    color: var(--orange);
-    text-transform: capitalize;
-    animation: show_name 6s ease-in-out;
-}
-
-@keyframes show_txt {
-    from, 20% {height: 0;}
-    30%, to {height: 7.1rem;}
-}
-@keyframes show_name {
-    from, 35% {width: 19.2rem;}
-    50%, to {width: 45.5rem;}
-}
-@keyframes show_wrap {
-    from, to {visibility: visible; z-index: 3;}
-    from, 50% {opacity: 1;}
-    60%, to {opacity: 0;}
+:root {
+    --width: 1200px;
+    --orange: #F7941D;
+    --blue: #005DAA;
+    --swip: 0.5s ease-in-out;
+    --hover: 0.3s ease-out;
 }
 
 /* header */
@@ -122,20 +74,14 @@ header {
     z-index: 2;
     display: flex;
     justify-content: center;
-    transition: var(--transition);
+    transition: var(--swip);
 }
 
 .scrolled {
-    transform: translateY(-14rem);
-    background-color: rgba(255, 255, 255, 0.8);
+    transform: translateY(-140px);
+    background-color: #000000B3;
     backdrop-filter: blur(2rem);
 }
-
-.scrolled a, .scrolled button {
-    color: var(--dark);
-}
-
-.scrolled .stroke::before {background-color: var(--dark);}
 
 .header {
     position: relative;
@@ -144,7 +90,7 @@ header {
 
 /* logo */
 .header_logo {
-    height: 14rem;
+    height: 140px;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -152,12 +98,12 @@ header {
 }
 
 .logo {display: flex;}
-.logo img {height: 14rem;}
+.logo img {height: 140px;}
 
 /* navigation */
 nav {
     position: relative;
-    height: 6rem;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -165,7 +111,7 @@ nav {
 
 nav a, nav button {
     position: relative;
-    color: var(--light);
+    color: #EEE;
     transition: var(--hover);
     text-transform: uppercase;
     font-size: 1.4rem;
@@ -173,7 +119,7 @@ nav a, nav button {
 
 .themes, .language {display: flex;}
 
-.not {color: #EEEEEEB3;} /* current toggled */
+.not {color: #EEEEEEB3;}
 .dark {margin-left: 3.6rem;}
 .kor {margin-right: 3.6rem;}
 
@@ -185,7 +131,6 @@ nav a, nav button {
     width: .05rem;
     height: 1.2rem;
     background-color: #EEEEEEB3;
-    transition: var(--hover);
 }
 
 ul {
@@ -202,6 +147,7 @@ ul li {
 
 ul a {
     font-size: 1.6rem;
+    text-transform: uppercase;
 }
 
 nav a:hover, nav button:hover {color: var(--orange);}
@@ -238,12 +184,13 @@ nav a:hover, nav button:hover {color: var(--orange);}
     transform: translate(-50%, -50%);
     width: 45.5rem;
     text-align: center;
+    /* pointer-events: none; */
 }
 
 .visual_txt h1 {
     font-size: 6rem;
     text-transform: capitalize;
-    color: var(--light);
+    color: #EEE;
     height: 7.1rem;
 }
 
