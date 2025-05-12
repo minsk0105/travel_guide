@@ -17,6 +17,8 @@ window.addEventListener('DOMContentLoaded', () => {
             : $('header').removeClass('scrolled');
         
         $('#visual').css('background-color', `rgba(0, 0, 0, ${(currentY / 1000) + .2})`);
+
+        console.log(currentY);
     });
 
 });
@@ -114,3 +116,21 @@ function swiping(index) {
         }
     });
 };
+
+
+const foodBtns = document.querySelectorAll('.open');
+const foodWraps = Array.from(document.querySelectorAll('.food_wrap'));
+
+foodBtns.forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+        const styles = Array.from(event.target.classList);
+
+        const matched = foodWraps.filter(el =>
+            styles.some(cls => el.classList.contains(cls))
+        );
+
+        matched.forEach((element) => {
+            element.style.transform = 'translate(0)';
+        });
+    });
+});

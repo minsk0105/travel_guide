@@ -2,6 +2,7 @@
 @import url('cate.css');
 @import url('attr.css');
 @import url('food.css');
+@import url('acti.css');
 
 *,
 *::before,
@@ -181,17 +182,24 @@ nav a:hover, nav button:hover {color: var(--orange);}
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 45.5rem;
     text-align: center;
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 
 .visual_txt h1 {
     font-size: 6rem;
     text-transform: capitalize;
     color: #EEE;
+    height: 7.1rem;
 }
 
-.visual_txt span {color: var(--orange);}
+.visual_txt span {
+    display: inline-block;
+    color: var(--orange);
+    width: 19.2rem;
+    height: 7.1rem;
+}
 
 .visual_txt p {
     margin-top: 1rem;
