@@ -1,8 +1,10 @@
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', () => { 
+
     // $('body').css('overflow', 'hidden');
     // setTimeout(() => {
     //     $('body').css('overflow', 'auto');
     // }, 4500);
+
     const actBoxes = document.querySelectorAll('.act_box');
         
     window.addEventListener('scroll', () => {
@@ -28,15 +30,22 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        const boxRect = actBoxes[0].getBoundingClientRect().top;
-        if (boxRect < 172.7 && boxRect > 172.6) {
+        /* activities scroll */
+        const startBox = currentY - 6500;
+        let order = Math.floor(startBox / 350);
+        
+        if (currentY >= 6500) {
+            for (let i = 0; i < actBoxes.length; i++) {
+                if (order >= i) {
+                    actBoxes[i].style.transform = `scale(calc(1 - ${(startBox / 10000) - ((350 / 10000) * i)}))`
+                }
+            }
         }
     });
 
-    /* activities scroll */
     $('.act_items').css('height', `${410 * (actBoxes.length + 1)}px`);
     for (let i = 0; i < actBoxes.length; i++) {
-        actBoxes[i].style.top = `calc(50% - (35rem / 2) + ${i * 40}px)`;
+        actBoxes[i].style.top = `calc(40% - (35rem / 2) + ${i * 30}px)`;
     }
 });
 

@@ -95,13 +95,6 @@
     margin-top: 1rem;
 }
 
-.more_caf {
-    margin-top: 4rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
 .more_caf > div,
 .pop_info > div {
     width: 244px;
@@ -125,9 +118,6 @@
     transition: var(--hover);
 }
 
-.more_caf > a:hover,
-.pop_info > a:hover {color: var(--orange);}
-
 .food_left > .popular {
     display: block;
     height: 50rem;
@@ -136,8 +126,6 @@
 .pop_info {
     width: 100%;
     height: 5rem;
-    display: flex;
-    align-items: center;
 }
 
 .pop_info h2 {
@@ -148,8 +136,10 @@
     width: 28.3rem;
 }
 
-.pop_info > div {
-    width: 23.1rem;
+.pop_info p {
+    /* margin-top: 1rem; */
+    font-size: 1.8rem;
+    color: #888888;
 }
 
 #map {
@@ -192,16 +182,4 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
-}
-
-.food_box div {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: white;
-}
-
-.fo_one {
-    top: 0;
-    left: 0;
 }
