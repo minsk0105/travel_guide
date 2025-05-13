@@ -15,6 +15,84 @@
     --swiping: .6s ease-in-out;
 }
 
+/* location_info */
+.location_info {
+    position: absolute;
+    top: 0;
+    left: 70rem;
+    width: 50rem;
+    height: 16rem;
+    z-index: 1;
+}
+
+.location_info > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.location_info svg {
+    width: 2.5rem;
+    margin-right: 1.5rem;
+}
+
+.location_info path {
+    fill: #888888;
+}
+
+.location_info p {
+    font-size: 1.4rem;
+}
+
+.place_tag {
+    margin-top: 2rem;
+}
+
+.place_tag span {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: var(--orange);
+    padding: 0 1.5rem;
+    border: 1px solid var(--orange);
+    height: 3rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-radius: 5rem;
+    margin-right: 2rem;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* swip_btn */
+.swip_btn {
+    position: absolute;
+    top: 34rem;
+    left: 58rem;
+    display: flex;
+    z-index: 1;
+}
+
+.swip_btn button {
+    width: 4rem;
+    height: 4rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.swip_btn img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.swip_btn img:hover {
+    filter: invert(63%) sepia(84%) saturate(1608%) hue-rotate(347deg) brightness(99%) contrast(95%);
+}
+
 /* swiper */
 .swiper {
     height: 100%;

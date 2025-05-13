@@ -6,6 +6,8 @@
     <title>ToJeju</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <link rel="stylesheet" href="Css/style.css">
 </head>
 <body>
@@ -119,7 +121,26 @@
 
                 <!-- attr contents -->
                 <div class="attr_contents">
+                    <div class="location_info">
+                        <div class="place">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" aria-hidden="true"><path d="M9,1C5.4,1,2.5,3.7,2.5,7.1c0,1.2,0.4,2.3,1,3.3l5.1,6.1c0.2,0.2,0.6,0.2,0.8,0l5.1-6.1c0.7-1,1-2.1,1-3.3C15.5,3.7,12.6,1,9,1z M9,9C8.2,9,7.5,8.3,7.5,7.5C7.5,6.7,8.2,6,9,6s1.5,0.7,1.5,1.5C10.5,8.3,9.8,9,9,9z"></path></svg>
+                            <p></p>
+                        </div>
+                        <div class="fee">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" class="DNzQ2" aria-hidden="true"><path d="M9,16.5c4.1,0,7.5-3.4,7.5-7.5c0-4.1-3.4-7.5-7.5-7.5C4.9,1.5,1.5,4.9,1.5,9C1.5,13.1,4.9,16.5,9,16.5zM13.5,6.1l-0.7,2.4h0.7C13.8,8.5,14,8.7,14,9s-0.2,0.5-0.5,0.5h-1.2l-0.8,3h-1.3l-0.8-3h-1l-0.8,3H6.3l-0.8-3h-1C4.2,9.5,4,9.3,4,9s0.2-0.5,0.5-0.5h0.8L4.6,6.1h1.2l0.6,2.4h1.4l0.6-2.4h1.2l0.6,2.4h1.4l0.6-2.4H13.5z M6.6,9.5L7,11.2l0.5-1.7H6.6z M9,7.7L8.8,8.5h0.4L9,7.7z M10.5,9.5l0.5,1.7l0.4-1.7H10.5z"></path></svg>
+                            <p></p>
+                        </div>
+                        <div class="place_tag">
+                        </div>
+                    </div>
 
+                    <!-- swip_btn -->
+                    <div class="swip_btn">
+                        <button type="button" class="prev"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAADGSURBVGhD7dbBDcIwDIXhAAswEqMwAhsAm8EEsFHxo4lU9cCBxM9y9T7JSrn5r4jUIiIiEuBqc5sf88HyU53uiH09WTbz5oe8fSYtH0XLR9HyUbR8FC0fRcv3GvU1ercJCTjU8x/PxZnqr/PL0eYyP+aD5V826S5zc7ahX+qeO7D2rudpce5sHt9fTkYGQLvYtIjRAUCN8AgAWoRXAFAiPAPAPcI7AFwjGAHgFsEKAJcIZgCsI/A7VQC0CJyb+YoVEZEIpXwArLlZU7zxFkcAAAAASUVORK5CYII=" alt=""></button>
+                        <button type="button" class="next"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAADFSURBVGhD7djRDcIwDATQQBdgIxiFEboBsBlMwEjgK0HwwQeitk8u96RT2n75qlRENBER+WtDX+c6WraWy3RXDIa/9RzwINO6r15QJrWExxY6W1aW3XT3WlO2k9c3QCvhVQAoJTwLQHoJ7wKQWiKiAKSViCoAKSUiCwDlw47w/muN7C3lPEtcLRs8qGi0lB3+k/SzkyeXU6z3afRbi3nzs94+g4Zn0fAsGp5Fw7NoeBYN/6uI/0ZPj8taMHipbSMiIkvQ2h3EAVcw6R+shwAAAABJRU5ErkJggg==" alt=""></button>
+                    </div>
+
+                    <!-- swiper -->
                     <div class="swiper">
                         <div class="attr_box out_range">
                             <div class="attr_img">
@@ -272,6 +293,131 @@
 
         </div>
     </main>
+
+    <!-- food -->
+    <section id="food">
+        <div class="food">
+            <h1 class="title">food</h1>
+            
+            <div class="food_contents">
+                <div class="food_left">
+                    <h1>Introducing Jeju Island's<br>various foods</h1>
+
+                    <div class="tradition">
+                        <div class="fo_intro_img">
+                            <img src="https://mblogthumb-phinf.pstatic.net/MjAxNzAzMTRfMjcg/MDAxNDg5NDIwMjE3Njc3.0ac12Im4XGbqtwZlu5ZYE7OYTM-ZBGgpngD3rTczl1Ig.unGZ5wnD4Re9Ffu2yRjS_C18qntH-p6FUo9X4rTcxMEg.JPEG.storyaza/image_6808461361489420152863.jpg?type=w800" alt="">
+                        </div>
+                        <div class="fo_intro_info">
+                            <h2>Food that embodies<br>Jeju’s traditions</h2>
+                            <p>This is a local food that can<br>only be tasted in Jeju.</p>
+                            <div class="food_list">
+                                <span>#bing rice cake</span>
+                                <span>#omegi rice cake</span>
+                                <span>#abalone porridge</span>
+                                <span>#meat noodles</span>
+                                <span>#dombe meat</span>
+                                <span>#grilled cutlassfish</span>
+                                <span>#sea bream raw fish</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="special">
+                        <div class="fo_intro_info">
+                            <h2>Fresh and delicious Jeju specialties</h2>
+                            <p>Jeju has a warm climate and fertile land,<br>making it possible to grow fresh crops.</p>
+                            <div class="food_list">
+                                <span>#black pig</span>
+                                <span>#tangerines</span>
+                                <span>#hallabong</span>
+                                <span>#cheonhyehyang</span>
+                                <span>#matcha</span>
+                                <span>#horseflesh</span>
+                                <span>#bracken</span>
+                                <span>#udo peanut makgeolli</span>
+                            </div>
+                        </div>
+                        <div class="fo_intro_img">
+                            <img src="https://cdn.jejudomin.co.kr/news/photo/201811/106768_102696_734.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="snack">
+                        <div class="fo_intro_img">
+                            <img src="https://jejudogo.com/files/attach/images/2023/09/27/8a0443a87b60c90f8fc1cf863677a401.jpg" alt="">
+                        </div>
+                        <div class="fo_intro_info">
+                            <h2>A variety of snacks<br>that everyone likes</h2>
+                            <p>Enjoy unforgettable snacks while traveling!</p>
+                            <div class="more_caf">
+                                <div></div>
+                                <a href="#">view more</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="popular">
+                        <div class="pop_info">
+                            <h2>Jeju Restaurants</h2>
+                            <div></div>
+                            <a href="#">view more</a>
+                        </div>
+                        <div id="map"></div>
+                    </div>
+                </div>
+                <div class="food_right">
+                    <div class="food_items">
+                        <div class="food_box">
+                            <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2016/02/25/76682956.3.jpg" alt="">
+                        </div>
+                        <div class="food_box">
+                            <img src="https://m.haepoom.com/web/product/big/202211/a44a49931bd1e5fb2b74b24e66ce2d3b.png" alt="">
+                        </div>
+                        <div class="food_box">
+                            <img src="https://t2.daumcdn.net/thumb/R720x0.fpng/?fname=http://t1.daumcdn.net/brunch/service/user/93aZ/image/5QDL8-G0O6Ez8QnfoW3ZYkrK5bI.png" alt="">
+                        </div>
+                        <div class="food_box">
+                            <img src="https://newsroom-prd-data.s3.ap-northeast-2.amazonaws.com/wp-content/uploads/2020/11/d_001-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- food -->
+    <section id="activities">
+        <div class="activities">
+            <h1 class="title">activities</h1>
+            
+            <div class="food_contents">
+                <div class="food_left">
+                    <h1>Introducing Jeju Island's<br>various foods</h1>
+                </div>
+                <div class="food_right">
+                    <div class="act_items">
+                        <div class="act_box">
+                            <img src="https://d2mgzmtdeipcjp.cloudfront.net/files/good/2021/08/31/16304017384195.jpg" alt="">
+                        </div>
+                        <div class="act_box">
+                            <img src="https://leisure-web.yanolja.com/_next/image?url=https%3A%2F%2Fimage6.yanolja.com%2Fleisure%2FCsYkuIOk5rt6O8dQ&w=3840&q=90" alt="">
+                        </div>
+                        <div class="act_box">
+                            <img src="https://www.hanwharesort.co.kr/irsweb/resort3/app/images/tpark/aqua_intro3.jpg" alt="">
+                        </div>
+                        <div class="act_box">
+                            <img src="https://minio.nculture.org/amsweb-opt/multimedia_assets/191/85886/94446/c/%EC%98%A4%EC%84%A4%EB%A1%9D-%ED%8B%B0-%EB%AE%A4%EC%A7%80%EC%97%84-%287%29_rev-medium-size.jpg" alt="">
+                        </div>
+                        <div class="act_box">
+                            <img src="https://d2mgzmtdeipcjp.cloudfront.net/files/good/2024/05/29/17169477485715.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="class"></div>
 
     <script src="Js/main.js"></script>
 

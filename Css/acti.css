@@ -1,0 +1,31 @@
+#activities {
+    padding-top: 12rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.activities {
+    width: var(--width);
+}
+
+.act_box {
+    position: sticky;
+    top: calc(50% - (35rem / 2));
+    width: 50rem;
+    height: 35rem;
+    background-color: lightblue;
+    margin-bottom: 6rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.act_box img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.class {height: 100vh;}
