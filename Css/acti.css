@@ -1,24 +1,92 @@
+/* activities */
 #activities {
+    margin-top: 12rem;
     padding-top: 12rem;
     width: 100%;
     display: flex;
     justify-content: center;
+    transition: var(--transition);
 }
 
 .activities {
     width: var(--width);
 }
 
+.activities > h1 {
+    position: sticky;
+    top: 12rem;
+}
+
+/* act contents */
+.act_contents {
+    margin-top: 6rem;
+}
+
+.act_left {
+    position: sticky;
+    top: 22.7rem;
+    float: left;
+}
+
+.act_left video {
+    width: 60rem;
+}
+
+.act_txt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45rem;
+}
+
+.act_txt > div {
+    position: absolute;
+    transition: var(--hover);
+    opacity: 0;
+}
+
+.act_txt > .show_act {opacity: 1;}
+
+.act_txt h1 {
+    color: #eee;
+    font-size: 3.8rem;
+}
+
+.act_txt p {
+    margin-top: 2rem;
+    color: #eee;
+    font-size: 1.8rem;
+}
+
+
+/* act_right */
+.act_right {
+    width: 50rem;
+    display: flex;
+    justify-content: center;
+    transform: translateX(10rem);
+}
+
 .act_box {
     position: sticky;
+    top: 22.7rem;
     width: 500px;
     height: 350px;
-    background-color: lightblue;
-    margin-bottom: 4rem;
+    margin-bottom: 40rem;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.act_box::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .act_box img {

@@ -5,21 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToJeju</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <link rel="stylesheet" href="Css/style.css">
 </head>
 <body>
-
-    <!-- intro animation -->
-    <!-- <div class="int_ani">
-        <div>
-            <div>
-                <h1>to jeju</h1>
-            </div>
-        </div>
-    </div> -->
 
     <!-- header -->
     <header>
@@ -70,46 +61,46 @@
 
                 <div class="cate_contents">
                     <div>
-                        <div class="cate_box one">
+                        <div class="cate_box one att">
                             <img src="https://www.c3ka.com/wp-content/uploads/2023/06/01-withjis-jinjungsung.jpg" alt="">
-                            <div class="att_one"></div>
-                            <div class="att_two"></div>
-                            <div class="att_thr"></div>
                             <div class="cate_txt">
                                 <h1>a</h1>
                                 <p>ttractions</p>
                             </div>
+                            <div class="cover att_one"></div>
+                            <div class="cover att_two"></div>
+                            <div class="cover att_thr"></div>
                         </div>
-                        <div class="cate_box two">
+                        <div class="cate_box two act">
                             <img src="https://asset.981park.com/www/common/mweb/img/sub/play/img-galexy-arena1.png" alt="">
-                            <div class="act_one"></div>
-                            <div class="act_two"></div>
-                            <div class="act_thr"></div>
                             <div class="cate_txt">
                                 <h1>a</h1>
                                 <p>ctivities</p>
                             </div>
+                            <div class="cover act_one"></div>
+                            <div class="cover act_two"></div>
+                            <div class="cover act_thr"></div>
                         </div>
                     </div>
                     <div>
-                        <div class="cate_box two">
+                        <div class="cate_box two foo">
                             <img src="https://cdn.eyesmag.com/content/uploads/sliderImages/2024/01/30/05-23f8c3c3-cf0e-4754-a75d-b77ab4868391.jpg" alt="">
-                            <div class="foo_one"></div>
-                            <div class="foo_two"></div>
-                            <div class="foo_thr"></div>
                             <div class="cate_txt">
                                 <h1>f</h1>
                                 <p>ood</p>
                             </div>
+                            <div class="cover foo_one"></div>
+                            <div class="cover foo_two"></div>
+                            <div class="cover foo_thr"></div>
                         </div>
-                        <div class="cate_box one">
+                        <div class="cate_box one oth">
                             <img src="https://api.cdn.visitjeju.net/photomng/imgpath/201804/30/ca9b0972-d6ef-4fba-9b08-89a867a0f19d.jpg" alt="">
-                            <div class="oth_one"></div>
-                            <div class="oth_two"></div>
                             <div class="cate_txt">
                                 <h1>o</h1>
                                 <p>ther</p>
                             </div>
+                            <div class="cover oth_one"></div>
+                            <div class="cover oth_two"></div>
                         </div>
                     </div>
                 </div>
@@ -119,7 +110,6 @@
             <section id="attractions">
                 <h1 class="title">attractions</h1>
 
-                <!-- attr contents -->
                 <div class="attr_contents">
                     <div class="location_info">
                         <div class="place">
@@ -287,7 +277,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </section>
 
@@ -298,16 +287,14 @@
     <section id="food">
         <div class="food">
             <h1 class="title">food</h1>
-            
+
+            <!-- food contents -->
             <div class="food_contents">
                 <div class="food_left">
                     <h1>Introducing Jeju Island's<br>various foods</h1>
-
-                    <div class="tradition">
-                        <div class="fo_intro_img">
-                            <img src="https://mblogthumb-phinf.pstatic.net/MjAxNzAzMTRfMjcg/MDAxNDg5NDIwMjE3Njc3.0ac12Im4XGbqtwZlu5ZYE7OYTM-ZBGgpngD3rTczl1Ig.unGZ5wnD4Re9Ffu2yRjS_C18qntH-p6FUo9X4rTcxMEg.JPEG.storyaza/image_6808461361489420152863.jpg?type=w800" alt="">
-                        </div>
-                        <div class="fo_intro_info">
+                    <div class="food_box tradition scroll_show">
+                        <div class="food_img"><img src="https://mblogthumb-phinf.pstatic.net/MjAxNzAzMTRfMjcg/MDAxNDg5NDIwMjE3Njc3.0ac12Im4XGbqtwZlu5ZYE7OYTM-ZBGgpngD3rTczl1Ig.unGZ5wnD4Re9Ffu2yRjS_C18qntH-p6FUo9X4rTcxMEg.JPEG.storyaza/image_6808461361489420152863.jpg?type=w800" alt=""></div>
+                        <div class="food_info">
                             <h2>Food that embodies<br>Jeju’s traditions</h2>
                             <p>This is a local food that can<br>only be tasted in Jeju.</p>
                             <div class="food_list">
@@ -321,9 +308,8 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="special">
-                        <div class="fo_intro_info">
+                    <div class="food_box special scroll_show">
+                        <div class="food_info">
                             <h2>Fresh and delicious Jeju specialties</h2>
                             <p>Jeju has a warm climate and fertile land,<br>making it possible to grow fresh crops.</p>
                             <div class="food_list">
@@ -337,42 +323,41 @@
                                 <span>#udo peanut makgeolli</span>
                             </div>
                         </div>
-                        <div class="fo_intro_img">
-                            <img src="https://cdn.jejudomin.co.kr/news/photo/201811/106768_102696_734.jpg" alt="">
-                        </div>
+                        <div class="food_img"><img src="https://cdn.jejudomin.co.kr/news/photo/201811/106768_102696_734.jpg" alt=""></div>
                     </div>
-
-                    <div class="snack">
-                        <div class="fo_intro_img">
-                            <img src="https://jejudogo.com/files/attach/images/2023/09/27/8a0443a87b60c90f8fc1cf863677a401.jpg" alt="">
-                        </div>
-                        <div class="fo_intro_info">
+                    <div class="food_box snack scroll_show">
+                        <div class="food_img"><img src="https://jejudogo.com/files/attach/images/2023/09/27/8a0443a87b60c90f8fc1cf863677a401.jpg" alt=""></div>
+                        <div class="food_info">
                             <h2>A variety of snacks<br>that everyone likes</h2>
                             <p>Enjoy unforgettable snacks while traveling!</p>
+                            <div class="food_list">
+                                <span>#cafe guhalgu</span>
+                                <span>#fritz</span>
+                                <span>#azulejo</span>
+                                <span>#orif</span>
+                                <span>#noeulli</span>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="popular">
+                    <div class="food_box popular scroll_show">
                         <div class="pop_info">
-                            <h2>Jeju Restaurants</h2>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <h2>Popular restaurants in Jeju Island</h2>
+                            <p>We recommend a variety<br>of delicious restaurants to you.</p>
+
+                            <div id="map"></div>
                         </div>
-                        <div id="map"></div>
                     </div>
                 </div>
                 <div class="food_right">
-                    <div class="food_items">
-                        <div class="food_box">
-                            <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2016/02/25/76682956.3.jpg" alt="">
+                    <div class="food_detail">
+                        <div class="eat_left">
+                            <div><img src="https://image.osulloc.com/kr/ko/static/images/about/infographic/bg_10.jpg" alt=""></div>
+                            <div><img src="https://m.orangenamu.com/web/product/extra/big/202211/1fe5d043543357e5a9b926e924dc17bf.jpg" alt=""></div>
+                            <div><img src="https://images-kr.amoremall.com/products/411110000663/411110000663_03.jpg?1731564423292&resize=1100:1100&shrink=1100:1100" alt=""></div>
                         </div>
-                        <div class="food_box">
-                            <img src="https://m.haepoom.com/web/product/big/202211/a44a49931bd1e5fb2b74b24e66ce2d3b.png" alt="">
-                        </div>
-                        <div class="food_box">
-                            <img src="https://t2.daumcdn.net/thumb/R720x0.fpng/?fname=http://t1.daumcdn.net/brunch/service/user/93aZ/image/5QDL8-G0O6Ez8QnfoW3ZYkrK5bI.png" alt="">
-                        </div>
-                        <div class="food_box">
-                            <img src="https://newsroom-prd-data.s3.ap-northeast-2.amazonaws.com/wp-content/uploads/2020/11/d_001-1.jpg" alt="">
+                        <div class="eat_right">
+                            <div><img src="https://m.haepoom.com/web/product/big/202211/a44a49931bd1e5fb2b74b24e66ce2d3b.png" alt=""></div>
+                            <div><img src="https://newsroom-prd-data.s3.ap-northeast-2.amazonaws.com/wp-content/uploads/2020/11/d_001-1.jpg" alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -385,11 +370,35 @@
         <div class="activities">
             <h1 class="title">activities</h1>
 
-            <div class="food_contents">
-                <div class="food_left">
-                    <h1>Introducing Jeju Island's<br>various foods</h1>
+            <div class="act_contents">
+                <div class="act_left">
+                    <video loop="" muted="" playsinline="" autoplay="" preload="auto" class="video_box">
+                            <source src="https://www.hyungji-elite.com/inc/img/main/globe_video01.webm" type="video/webm" class="webm_src">
+                    </video>
+                    <div class="act_txt">
+                        <div class="show_act">
+                            <h1>Jeju ATV Experience</h1>
+                            <p>Explore Jeju Island yourself through ATV</p>
+                        </div>
+                        <div>
+                            <h1>Jeju 9.81 Park</h1>
+                            <p>You can enjoy a variety of activities here.</p>
+                        </div>
+                        <div>
+                            <h1>Jeju Aqua Planet</h1>
+                            <p>It is the most popular place for children.</p>
+                        </div>
+                        <div>
+                            <h1>Osulloc Tea Music</h1>
+                            <p>You can taste and appreciate various types of tea.</p>
+                        </div>
+                        <div>
+                            <h1>Seogwipo Submarine</h1>
+                            <p>You can see the blue Jeju sea at a glance.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="food_right">
+                <div class="act_right">
                     <div class="act_items">
                         <div class="act_box">
                             <img src="https://d2mgzmtdeipcjp.cloudfront.net/files/good/2021/08/31/16304017384195.jpg" alt="">
@@ -412,6 +421,61 @@
         </div>
     </section>
 
+    <!-- other -->
+    <section id="other">
+        <div class="other">
+            <h1 class="title">other</h1>
+
+            <div class="other_contents">
+                <div class="other_box">
+                    <div class="other_img">
+                        <img src="https://lh3.googleusercontent.com/proxy/VuYhz_swVfkHKshbBgwMmWi4WV4uJYBzb5Ebd607DHKdyaeRAm_6X-FxaxiEzLcdyg5LosNdAkc5zXyWbkQ0zpzDhaRG8bzS5jwa9twbVaJdl43B8UKJTsQHtVTsrm3OzX9f" alt="">
+                    </div>
+                    <h2>Jeju 4.3 Memorial Hall</h2>
+                    <p>It is a meaningful place that commemorates the painful history of Jeju Island.</p>
+                </div>
+                <div class="other_box">
+                    <div class="other_img">
+                        <img src="https://www.headlinejeju.co.kr/news/photo/201912/404754_304019_5153.jpg" alt="">
+                    </div>
+                    <h2>Jeju Modern Art Museum</h2>
+                    <p>It is a meaningful place that commemorates the painful history of Jeju Island.</p>
+                </div>
+                <div class="other_box">
+                    <div class="other_img">
+                        <img src="https://minio.nculture.org/amsweb-opt/multimedia_assets/168/99826/133293/c/%EC%A0%9C%EC%A3%BC-%ED%85%8C%EB%94%94%EB%B2%A0%EC%96%B4-%EB%AE%A4%EC%A7%80%EC%97%84_%ED%85%8C%EB%94%94%EB%B2%A0%EC%96%B4-%EB%AE%A4%EC%A7%80%EC%97%84-%EB%82%B4%EB%B6%80-%288%29-medium-size.jpg" alt="">
+                    </div>
+                    <h2>Teddy Bear Museum</h2>
+                    <p>It is a meaningful place that commemorates the painful history of Jeju Island.</p>
+                </div>
+            </div>
+
+            <div class="other_contents">
+                <div class="other_box">
+                    <div class="other_img">
+                        <img src="https://api.cdn.visitjeju.net/photomng/imgpath/202410/15/dbcf908a-9c8c-4fc0-947c-e71554472c23.jpg" alt="">
+                    </div>
+                    <h2>Camellia Hill</h2>
+                    <p>It is a meaningful place that commemorates the painful history of Jeju Island.</p>
+                </div>
+                <div class="other_box">
+                    <div class="other_img">
+                        <img src="https://api.cdn.visitjeju.net/photomng/imgpath/202407/08/0830f1eb-36ed-4827-83f5-464a9eae2a90.jpg" alt="">
+                    </div>
+                    <h2>Jeju Folk Village</h2>
+                    <p>It is a meaningful place that commemorates the painful history of Jeju Island.</p>
+                </div>
+                <div class="other_box">
+                    <div class="other_img">
+                        <img src="https://cdn.ijejutoday.com/news/photo/202008/223066_196659_1313.jpg" alt="">
+                    </div>
+                    <h2>Jeju Samdasu Forest Trail</h2>
+                    <p>It is a meaningful place that commemorates the painful history of Jeju Island.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <script src="Js/main.js"></script>
 
 </body>

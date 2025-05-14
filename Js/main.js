@@ -1,54 +1,109 @@
-window.addEventListener('DOMContentLoaded', () => { 
-
-    // $('body').css('overflow', 'hidden');
-    // setTimeout(() => {
-    //     $('body').css('overflow', 'auto');
-    // }, 4500);
-
+// header
+window.addEventListener('DOMContentLoaded', () => {
     const actBoxes = document.querySelectorAll('.act_box');
-        
+
+    const headerState = (this.window.scrollY !== 0)
+            ? $('header').addClass('scrolled')
+            : $('header').removeClass('scrolled');
+    
     window.addEventListener('scroll', () => {
         const currentY = this.window.scrollY;
         const headerState = (currentY !== 0)
             ? $('header').addClass('scrolled')
             : $('header').removeClass('scrolled');
-
+        
         $('#visual').css('background-color', `rgba(0, 0, 0, ${(currentY / 1000) + .2})`);
 
         // food scroll
         const foodBoxes = document.querySelectorAll('.food_left > div');
         
-        if (currentY >= 2280 && currentY <= 2280 + (800 * foodBoxes.length)) {
-            const startPoint = (currentY - 2280);
-            let order = Math.floor(startPoint / 800);
-            const detail = startPoint - (800 * order);
-            
-            foodBoxes[order].classList.add('scr_show');
+        if (currentY >= 2495 && currentY <= 2495 + (1000 * foodBoxes.length)) {
+            const startPoint = (currentY - 2495);
+            let order = Math.floor(startPoint / 1000);
+            const detail = startPoint - (1000 * order);
 
-            if (detail >= (800 * 0.9)) {
-                foodBoxes[order].classList.remove('scr_show');
-            }
+            foodBoxes[order].classList.add('scroll_show');
+            if (detail >= (1000 * .5)) foodBoxes[order].classList.remove('scroll_show');
         }
 
-        /* activities scroll */
-        const startBox = currentY - 6500;
-        let order = Math.floor(startBox / 350);
-        
-        if (currentY >= 6500) {
+        // activities scroll
+        const actTxt = document.querySelectorAll('.act_txt > div');
+        const startBox = currentY - 7642;
+        let order = Math.floor(startBox / 750);
+
+        actTxt.forEach((item, index) => {
+            if (order === index) {
+                item.classList.add('show_act');
+            } else item.classList.remove('show_act');
+        });
+
+        if (currentY >= 7642 && currentY <= 10642) {
             for (let i = 0; i < actBoxes.length; i++) {
+                const scale = (startBox / 10000) - ((750 / 10000) * i);
                 if (order >= i) {
-                    actBoxes[i].style.transform = `scale(calc(1 - ${(startBox / 10000) - ((350 / 10000) * i)}))`
+                    actBoxes[i].style.transform = `scale(calc(1 - ${scale}))`;
+                    actBoxes[i].style.clipPath = `polygon(${scale * 4}% 0%, ${100 - (scale * 4)}% 0%, ${100 - (scale * 6)}% 100%, ${scale * 6}% 100%)`;
+                    actBoxes[i].style.marginBottom = `40rem`;
                 }
             }
         }
+        else if (currentY >= 10642) {
+            for (let i = 0; i < actBoxes.length; i++) {
+                actBoxes[i].style.marginBottom = `${(actBoxes.length - i) * 30}px`;
+            }
+        }
+
+        if (currentY >= 7342) {
+            $('#activities').css('background-color', 'black');
+            $('.activities > h1').css('color', '#eee');
+        } else {
+            $('#activities').css('background-color', 'white');
+            $('.activities > h1').css('color', 'black');
+        }
     });
 
-    $('.act_items').css('height', `${410 * (actBoxes.length + 1)}px`);
+    $('.act_items').css('height', `${750 * (actBoxes.length + 1)}px`);
     for (let i = 0; i < actBoxes.length; i++) {
-        actBoxes[i].style.top = `calc(40% - (35rem / 2) + ${i * 30}px)`;
+        actBoxes[i].style.top = `calc(22.7rem + ${i * 30}px)`;
     }
+
+    // category
+    const cateBoxes = document.querySelectorAll('.cate_box');
+    
+    cateBoxes.forEach((box) => {
+        const filterShade = Array.from(box.querySelectorAll('.cover'));
+        const thisCate = box.children[1].children[1].textContent;
+        const thisTag = box.children[1].children[0];
+
+        box.addEventListener('mouseover', () => {
+            for (let i = 0; i < filterShade.length; i++) {
+                if (thisCate === 'ood') {
+                    if (i === 2) filterShade[i].style.transform = `translate(50%, 50%)`;
+                    else if (i === 1) filterShade[i].style.transform = `translateY(-100%)`;
+                    else filterShade[i].style.transform = `translateX(-100%)`;
+                } else if (thisCate === 'ther') {
+                    if (i === 0) filterShade[i].style.transform = `scale(1.4)`;
+                    else filterShade[i].style.transform = `translateY(50%)`;
+                }
+                else {
+                    if (i === 0) filterShade[i].style.transform = `translate(-35%, -35%)`;
+                    else if (i === 1) filterShade[i].style.transform = `translate(35%, -35%)`;
+                    else filterShade[i].style.transform = `translate(0, 35%)`;
+                }
+            }
+
+            // thisTag.classList.add('tag');
+        });
+
+        box.addEventListener('mouseout', () => {
+            // thisTag.classList.remove('tag');
+            filterShade.forEach(item => item.style.transform = `translate(0, 0)`);
+        });
+    });
+    
 });
 
+// attractions
 let getJson;
 fetch("Js/place.json")
 .then((res) => {

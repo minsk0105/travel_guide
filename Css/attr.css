@@ -3,7 +3,7 @@
     padding-top: 12rem;
 }
 
-/* attr_contents */
+/* attr contents */
 .attr_contents {
     position: relative;
     margin-top: 6rem;
@@ -98,7 +98,7 @@
     height: 100%;
     overflow: hidden;
     display: flex;
-    transition: .6s ease-in-out;
+    transition: var(--swiping);
     transform: translateX(-1400px);
 }
 
