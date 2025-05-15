@@ -221,3 +221,23 @@ const tiles = L.tileLayer('http://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
+
+// other
+const otherBoxes = document.querySelectorAll('.other_box');
+const modal = document.querySelector('.modal');
+otherBoxes.forEach((box) => {
+    box.addEventListener('click', (event) => {
+        $('.modal').addClass('open');
+
+        const modalImg = modal.children[0].children[0].children[0];
+        const modalTitle = modal.children[0].children[1];
+        const modalExp = modal.children[0].children[2];
+        const closeBtn = modal.children[0].children[3];
+        modalImg.src = box.children[0].children[0].src;
+        modalTitle.textContent = box.children[1].textContent;
+        modalExp.textContent = box.children[2].textContent;
+        closeBtn.addEventListener('click', () => {
+            $('.modal').removeClass('open');
+        });
+    });
+});

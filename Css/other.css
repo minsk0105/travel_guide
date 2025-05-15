@@ -21,6 +21,7 @@
     position: relative;
     width: 350px;
     height: 550px;
+    cursor: pointer;
 }
 
 .other_img {
@@ -47,4 +48,76 @@
 .other_box p {
     margin-top: 1.5rem;
     font-size: 1.4rem;
+}
+
+/* modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.open {visibility: visible; z-index: 2;}
+
+.modal_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 600px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.modal_img {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    user-select: none;
+}
+
+.modal_img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    user-select: none;
+}
+
+.modal_box h2 {
+    margin-top: 2.5rem;
+    font-size: 2.5rem;
+    padding: 0 2rem;
+    pointer-events: none;
+    user-select: none;
+}
+
+.modal_box p {
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+    padding: 0 2rem;
+    pointer-events: none;
+    user-select: none;
+}
+
+.modal_box button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-transform: uppercase;
+}
+
+.modal_box button:hover {
+    color: var(--orange);
 }
