@@ -3,68 +3,18 @@
     padding-top: 12rem;
 }
 
+:root {
+    --swiping: 0.6s ease-in-out;
+}
+
 /* attr contents */
 .attr_contents {
     position: relative;
     margin-top: 6rem;
     width: 100%;
-    height: 48rem;
 }
 
-:root {
-    --swiping: .6s ease-in-out;
-}
-
-/* location_info */
-.location_info {
-    position: absolute;
-    top: 0;
-    left: 70rem;
-    width: 50rem;
-    height: 16rem;
-    z-index: 1;
-}
-
-.location_info > div {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.location_info svg {
-    width: 2.5rem;
-    margin-right: 1.5rem;
-}
-
-.location_info path {
-    fill: #888888;
-}
-
-.location_info p {
-    font-size: 1.4rem;
-}
-
-.place_tag {
-    margin-top: 2rem;
-}
-
-.place_tag span {
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    color: var(--orange);
-    padding: 0 1.5rem;
-    border: 1px solid var(--orange);
-    height: 3rem;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    border-radius: 5rem;
-    margin-right: 2rem;
-    pointer-events: none;
-    user-select: none;
-}
-
-/* swip_btn */
+/* swip btn */
 .swip_btn {
     position: absolute;
     top: 34rem;
@@ -95,17 +45,16 @@
 
 /* swiper */
 .swiper {
-    height: 100%;
     overflow: hidden;
     display: flex;
     transition: var(--swiping);
-    transform: translateX(-1400px);
 }
 
+/* attr box */
 .attr_box {
     position: relative;
     width: 66rem;
-    height: 100%;
+    height: 50rem;
     margin-right: 4rem;
     overflow: hidden;
     transition: var(--transition);
@@ -120,8 +69,9 @@
     justify-content: center;
     align-items: center;
     transition: var(--transition);
+    pointer-events: none;
     user-select: none;
-    transform: translateY(160px);
+    transform: translateY(180px);
 }
 
 .attr_img::before {
@@ -151,8 +101,9 @@
     transition: var(--transition);
 }
 
-/* attr_info */
+/* attr info */
 .attr_info {
+    height: 18rem;
     padding: 0 3rem;
     padding-top: 2rem;
 }

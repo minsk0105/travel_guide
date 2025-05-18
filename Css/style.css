@@ -1,9 +1,7 @@
 @charset "UTF-8";
-@import url('cate.css');
-@import url('attr.css');
+@import url('category.css');
+@import url('attractions.css');
 @import url('food.css');
-@import url('acti.css');
-@import url('other.css');
 
 *,
 *::before,

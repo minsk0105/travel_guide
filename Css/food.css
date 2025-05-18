@@ -17,15 +17,17 @@
     justify-content: space-between;
 }
 
+/* food left */
 .food_left > h1 {
     font-size: 5rem;
-    height: 80rem;
     font-weight: bold;
+    height: 100vh;
 }
 
+/* food box */
 .food_left > .food_box {
     width: 100%;
-    height: 100rem;
+    height: 100vh;
     display: flex;
     transition: var(--transition);
 }
@@ -89,16 +91,13 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    background-color: #f3f3f3;
+    background-color: #F3F3F3;
     text-transform: capitalize;
     margin-right: 1rem;
     margin-top: 1rem;
 }
 
-.pop_info {
-    width: 66rem;
-}
-
+.pop_info {width: 66rem;}
 #map {
     margin-top: 4rem;
     width: 100%;
@@ -107,7 +106,7 @@
     background-color: lightblue;
 }
 
-/* food detail */
+/* food right */
 .food_detail {
     position: sticky;
     top: 10.7rem;
@@ -142,6 +141,7 @@
     height: 30rem;
     margin-bottom: 2rem;
     overflow: hidden;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
